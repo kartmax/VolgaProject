@@ -1,0 +1,20 @@
+@import "bourbon";
+
+//PT Sans
+ @include font-face("PTsans", "../fonts/PT_Sans/PT_Sans-Web-Regular", 400, $file-formats: ttf);
+ @include font-face("PTsans", "../fonts/PT_Sans/PT_Sans-Web-Bold", 700, $file-formats: ttf);
+
+//Exo 2
+@include font-face("Exo2", "../fonts/Exo2/Exo2-Light", 300, $file-formats: ttf);
+@include font-face("Exo2", "../fonts/Exo2/Exo2-Regular", 400, $file-formats: ttf);
+@include font-face("Exo2", "../fonts/Exo2/Exo2-SemiBold", 600, $file-formats: ttf);
+
+//AriaMT
+@include font-face("ArialMT", "../fonts/ArialMT/avantiBold", 700, $file-formats: ttf);
+
+//Avanti
+@include font-face("Avanti", "../fonts/Avanti/avantiReg", 400, $file-formats: ttf);
+@include font-face("Avanti", "../fonts/Avanti/avantiBold", 700, $file-formats: ttf);
+
+
+

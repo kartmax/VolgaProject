@@ -1,0 +1,7 @@
+.blog-page {
+  @extend .inner-page;
+
+  .widget-area {
+    padding-bottom: 200px;
+  }
+}

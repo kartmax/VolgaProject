@@ -1,0 +1,50 @@
+.content-area {
+  width: 100%;
+
+  @media only screen and (min-width : 768px) {
+    width: calc(100% - 240px);
+  }
+
+  @media only screen and (min-width : 991px) {
+    width: calc(100% - 480px);
+  }
+
+  @media only screen and (min-width : 1200px){
+    width: calc(100% - 570px);
+  }
+
+  p {
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 7px;
+  }
+
+  ul {
+    font-size: 12px;
+    padding-top: 8px;
+  }
+
+  .pt-0 {
+    padding-top: 0;
+  }
+
+  .pb-0 {
+    padding-bottom: 0;
+  }
+}
+
+.site-main {
+  @media only screen and (min-width : 768px){
+    padding-left: 14px;
+  }
+
+  @media only screen and (min-width : 991px){
+    padding-right: 20px;
+  }
+}
+
+.content-title {
+  @include fontSize(18px);
+  font-weight: 400;
+  color: $title-color;
+}

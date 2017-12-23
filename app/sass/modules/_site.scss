@@ -1,0 +1,94 @@
+body {
+  position: relative;
+}
+
+.site {
+  position: relative;
+  z-index: 1;
+  padding-top: 140px;
+  margin-top: -140px;
+  background: url("../img/main-bg.jpg") center top no-repeat;
+  background-size: cover;
+  
+  &:before {
+    display: none;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -220px;
+    width: 59.6%;
+    height: 444px;
+    background: url("../img/bg-top-left.png") left top no-repeat;
+    background-size: contain;
+
+    @media only screen and (min-width : 991px) {
+      display: block;
+      top: -100px;
+    }
+
+    @media only screen and (min-width : 1010px) {
+      top: -60px;
+    }
+
+    @media only screen and (min-width : 1210px) {
+      top: 0;
+    }
+  }
+}
+
+.site-content {
+  position: relative;
+  z-index: 2;
+}
+
+.text-decor {
+  color: $main-color;
+  text-decoration: underline;
+  text-decoration-color: #77bfe3;
+  transition: 0.1s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+
+/*****************orientation blocks******************/
+.wrap-site-content {
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 30px;
+    width: 50%;
+    height: 241px;
+    background: url("../img/bg-bottom.png") left bottom no-repeat;
+    background-size: contain;
+  }
+}
+
+.progect {
+  order: 1;
+}
+
+.widget-area_left {
+  order: 2;
+}
+
+.content-area {
+  order: 3;
+}
+
+.widget-area_right {
+  order: 4;
+}
+
+.our-clients {
+  order: 5;
+}

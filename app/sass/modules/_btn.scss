@@ -1,0 +1,71 @@
+
+/***********submit************/
+.submit {
+  border: none;
+  border-radius: 5px;
+  background: $btn-color;
+  color: #fff;
+  font-family: $title-font;
+  @include fontSize(15px);
+  font-weight: 600;
+  padding: 11px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: rgba(0, 103, 159, 0.8);
+  }
+}
+
+/*************submit-2***************/
+.submit-2 {
+  height: 45px;
+  color: #fff;
+  font-family: $add-font;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 23px;
+  background: $main-color;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: rgba(0, 141, 212, 0.8);
+  }
+}
+
+/****************btn-tab***************/
+.btn-tab {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #d7d7d7;
+  position: absolute;
+  bottom: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: rgba(215,215,215,0.7);
+  }
+
+  &__icon {
+    @include sprite($icon-open-tab);
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    transition: 0.2s;
+  }
+
+  &__icon.active {
+    left: 23%;
+    transform: rotate(180deg) translateX(-50%);
+  }
+}

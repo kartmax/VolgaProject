@@ -1,0 +1,105 @@
+.our-clients {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  @media only screen and (min-width : 1250px) {
+    padding-top: 110px;
+    padding-bottom: 45px;
+  }
+
+  &__title {
+    position: relative;
+    @include fontSize(18px);
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 29px;
+    color: $title-color;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: url("../img/decor-line.png") center bottom;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 83px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid #dedede;
+    border-radius: 5px;
+  }
+
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    bottom: -50px;
+
+    @media only screen and (min-width : 1250px){
+      top: 50%;
+      bottom: auto;
+    }
+  }
+
+  .owl-prev {
+    left: calc(50% - 50px);
+    font-size: 0;
+    transform: rotate(180deg);
+    @include sprite($icon-prev-next-blue);
+
+    &:hover {
+      transform: rotate(0deg);
+      @include sprite($icon-prev-next-black);
+    }
+
+    @media only screen and (min-width : 1250px){
+      left: -30px;
+      transform: translateY(-50%) rotate(180deg);
+
+      &:hover {
+        transform: translateY(-50%) rotate(0deg);
+      }
+    }
+
+    @media only screen and (min-width : 1300px){
+      left: -40px;
+    }
+  }
+
+  .owl-next {
+    right: calc(50% - 50px);
+    font-size: 0;
+    @include sprite($icon-prev-next-blue);
+
+    &:hover {
+      transform: rotate(180deg);
+      @include sprite($icon-prev-next-black);
+    }
+
+    @media only screen and (min-width : 1250px){
+      right: -30px;
+      transform: translateY(-50%);
+
+      &:hover {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    @media only screen and (min-width : 1300px){
+      right: -40px;
+    }
+  }
+}

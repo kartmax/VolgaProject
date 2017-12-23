@@ -1,0 +1,251 @@
+.site-header {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 59.6%;
+    height: 444px;
+    background: url("../img/bg-top-left.png") left top no-repeat;
+    background-size: contain;
+
+    @media only screen and (min-width : 991px) {
+      display: none;
+    }
+  }
+}
+
+.top-header {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 5px;
+
+  @media only screen and (min-width : 580px) {
+    flex-flow: row;
+    align-items: flex-start;
+    padding-top: 4px;
+  }
+
+  @media only screen and (min-width : 1210px) {
+    align-items: center;
+  }
+}
+
+/****************site-branding*********************/
+.site-branding {
+  width: 258px;
+  height: 84px;
+  background: url("../img/logo.png") left center no-repeat;
+
+  @media only screen and (min-width : 580px) {
+    margin-right: 32px;
+  }
+
+  @media only screen and (min-width : 1300px){
+    margin-left: -25px;
+  }
+}
+
+/****************map-site*********************/
+.map-site {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  display: inline-flex;
+  align-items: center;
+  color: #949494;
+  font-family: $add-font;
+  font-size: 11px;
+  transition: 0.1s;
+
+  @media only screen and (min-width : 580px) {
+    top: 12px;
+    left: 147px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &__icon {
+    @include sprite($icon-sistem);
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    margin-right: 5px;
+  }
+}
+
+/****************wrap-head-content*********************/
+.wrap-head-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+
+  @media only screen and (min-width : 580px) {
+    width: calc(100% - 291px);
+    align-items: flex-end;
+  }
+
+  @media only screen and (min-width : 1010px){
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  @media only screen and (min-width : 1210px){
+    flex-flow: nowrap;
+    justify-content: space-between;
+  }
+}
+
+/****************widget_search*********************/
+.widget.widget_search {
+  max-width: 400px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media only screen and (min-width : 580px) {
+    margin-left: 20px;
+  }
+
+  @media only screen and (min-width : 1010px) {
+    width: auto;
+  }
+
+  @media only screen and (min-width : 1300px) {
+    margin-right: 13px;
+  }
+}
+
+.search-form {
+  width: 100%;
+  height: 42px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-field {
+  @include fontSize(15px);
+  width: 100%;
+  height: 37px;
+  padding-left: 11px;
+  padding-right: 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #949494;
+  font-family: $title-font;
+  font-weight: 300;
+
+  @media only screen and (min-width : 1010px) {
+    width: 280px;
+  }
+}
+
+.search-submit {
+  @include sprite($icon-search);
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: inherit;
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+}
+
+/****************adress*********************/
+.adress {
+  @include fontSize(14px);
+  font-family: $title-font;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $title-color;
+  text-align: center;
+
+  @media only screen and (min-width : 580px) {
+    flex-flow: row;
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  @media only screen and (min-width : 1300px){
+    margin-right: 10px;
+  }
+
+  &__icon {
+    @include sprite($icon-marker);
+    display: inline-block;
+    min-width: 16px;
+
+    @media only screen and (min-width : 580px) {
+      margin-right: 15px;
+    }
+  }
+}
+
+/****************contact*********************/
+.contact {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+
+  @media only screen and (min-width : 580px) {
+    margin-left: 20px;
+    text-align: right;
+  }
+
+  @media only screen and (min-width : 1210px) {
+    max-width: 184px;
+  }
+
+  @media only screen and (min-width : 1300px){
+    margin-right: 15px;
+    margin-left: 0;
+  }
+
+  &__tel {
+    @include fontSize(24px);
+    font-weight: 700;
+    color: $title-color;
+    transition: 0.1s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__mail {
+    display: block;
+    margin-top: -2px;
+    margin-right: 2px;
+    font-size: 14px;
+    color: $main-color;
+    text-decoration: underline;
+    transition: 0.1s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+
+
